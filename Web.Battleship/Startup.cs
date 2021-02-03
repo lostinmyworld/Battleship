@@ -1,11 +1,13 @@
+using Data.EfCore.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace Api.Web.Battleship
+namespace Web.Battleship
 {
     public class Startup
     {
@@ -19,6 +21,11 @@ namespace Api.Web.Battleship
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<BattleShipContext>(options => options
+                .UseSqlServer(Configuration.GetConnectionString("BattleshipDb")
+                    , b => b.MigrationsAssembly("Web.Battleship")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web.Battleship", Version = "v1" });

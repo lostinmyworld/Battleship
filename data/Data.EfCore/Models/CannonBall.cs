@@ -3,14 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Data.EfCore.Models
 {
-    public class Coordinate
+    public class CannonBall
     {
         [Key]
         [DatabaseGenerat‌ed(DatabaseGeneratedOp‌​tion.None)]
         public int Id { get; set; }
-        public int MinX { get; set; }
-        public int MaxX { get; set; }
-        public int MinY { get; set; }
-        public int MaxY { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public bool Hit { get; set; }
+        public int GridId { get; set; }
+        public Grid Grid { get; set; }
     }
 }

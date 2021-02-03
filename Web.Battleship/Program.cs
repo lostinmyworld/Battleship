@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Api.Web.Battleship
+namespace Web.Battleship
 {
     public class Program
     {
