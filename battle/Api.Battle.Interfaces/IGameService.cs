@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Api.Battle.Interfaces
 {
-    interface IGameService
+    public interface IGameService
     {
+
     }
 }
