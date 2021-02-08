@@ -14,7 +14,6 @@ namespace Data.EfCore.Models
         public int MaxY { get; set; }
         public bool IsHit { get; set; }
         public bool IsDestroyed { get; set; }
-        public int GridId { get; set; }
         public Grid Grid { get; set; }
     }
 }

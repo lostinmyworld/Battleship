@@ -13,17 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{E4A8B389-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "base", "base", "{8E5AA61C-E907-4BA4-A997-E9CABCACDC6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.EfCore", "..\data\Data.EfCore\Data.EfCore.csproj", "{737540B9-A07C-4299-8942-852D2C10DB17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.EfCore", "..\data\Data.EfCore\Data.EfCore.csproj", "{737540B9-A07C-4299-8942-852D2C10DB17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Repository", "..\data\Data.Repository\Data.Repository.csproj", "{4A7E9970-AA99-4E82-92FC-D067E0DBC727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Repository", "..\data\Data.Repository\Data.Repository.csproj", "{4A7E9970-AA99-4E82-92FC-D067E0DBC727}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "battle", "battle", "{A3C19DE5-7380-47D1-81FF-14F776FBB969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Battle.Interfaces", "..\battle\Api.Battle.Interfaces\Api.Battle.Interfaces.csproj", "{A5E8303D-7D7F-4BFF-90A1-AF7117CAF829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Battle.Interfaces", "..\battle\Api.Battle.Interfaces\Api.Battle.Interfaces.csproj", "{A5E8303D-7D7F-4BFF-90A1-AF7117CAF829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Battle.Services", "..\battle\Api.Battle.Services\Api.Battle.Services.csproj", "{8F1C0118-5365-4DC7-9F9B-8B8F5EDAF34D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Battle.Services", "..\battle\Api.Battle.Services\Api.Battle.Services.csproj", "{8F1C0118-5365-4DC7-9F9B-8B8F5EDAF34D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Battle.DataTypes", "..\battle\Api.Battle.DataTypes\Api.Battle.DataTypes.csproj", "{456702DF-7783-4ED2-8027-2B48CC71276A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Battle.DataTypes", "..\battle\Api.Battle.DataTypes\Api.Battle.DataTypes.csproj", "{456702DF-7783-4ED2-8027-2B48CC71276A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Types", "..\data\Data.Types\Data.Types.csproj", "{1CB454EF-B595-47EE-9F66-BE5347190212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{456702DF-7783-4ED2-8027-2B48CC71276A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{456702DF-7783-4ED2-8027-2B48CC71276A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{456702DF-7783-4ED2-8027-2B48CC71276A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CB454EF-B595-47EE-9F66-BE5347190212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB454EF-B595-47EE-9F66-BE5347190212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB454EF-B595-47EE-9F66-BE5347190212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB454EF-B595-47EE-9F66-BE5347190212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{A5E8303D-7D7F-4BFF-90A1-AF7117CAF829} = {A3C19DE5-7380-47D1-81FF-14F776FBB969}
 		{8F1C0118-5365-4DC7-9F9B-8B8F5EDAF34D} = {A3C19DE5-7380-47D1-81FF-14F776FBB969}
 		{456702DF-7783-4ED2-8027-2B48CC71276A} = {A3C19DE5-7380-47D1-81FF-14F776FBB969}
+		{1CB454EF-B595-47EE-9F66-BE5347190212} = {E4A8B389-29AF-44FA-9806-241F56048279}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {889B6BAF-E77D-452C-A057-2F29310F9FBA}

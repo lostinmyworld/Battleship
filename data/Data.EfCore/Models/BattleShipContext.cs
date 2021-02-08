@@ -9,8 +9,10 @@ namespace Data.EfCore.Models
         {
         }
 
+        public DbSet<BattleSession> Sessions { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Battleship> Battleships { get; set; }
         public DbSet<Grid> Grids { get; set; }
+        public DbSet<CannonBall> CannonBalls { get; set; }
     }
 }

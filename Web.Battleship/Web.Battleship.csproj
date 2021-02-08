@@ -15,7 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\battle\Api.Battle.Interfaces\Api.Battle.Interfaces.csproj" />
+    <ProjectReference Include="..\battle\Api.Battle.Services\Api.Battle.Services.csproj" />
     <ProjectReference Include="..\data\Data.EfCore\Data.EfCore.csproj" />
+    <ProjectReference Include="..\data\Data.Repository\Data.Repository.csproj" />
   </ItemGroup>
 
 </Project>

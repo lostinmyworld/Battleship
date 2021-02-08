@@ -1,35 +1,30 @@
-using Data.EfCore.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
+using Web.Battleship.Extensions;
 
 namespace Web.Battleship
 {
     public class Startup
     {
+        public IConfiguration _configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
 
-            services.AddDbContext<BattleShipContext>(options => options
-                .UseSqlServer(Configuration.GetConnectionString("BattleshipDb")
-                    , b => b.MigrationsAssembly("Web.Battleship")));
+            services.AddDatabase(_configuration);
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web.Battleship", Version = "v1" });
-            });
+            services.AddServices();
+
+            services.AddSomeSwag();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

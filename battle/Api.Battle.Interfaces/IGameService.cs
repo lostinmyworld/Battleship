@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Api.Battle.DataTypes.Requests;
+using Api.Battle.DataTypes.Responses;
 using System.Threading.Tasks;
 
 namespace Api.Battle.Interfaces
 {
     public interface IGameService
     {
-
+        Task<CreateGameResponse> CreateGameSession(CreateGameRequest request);
     }
 }
