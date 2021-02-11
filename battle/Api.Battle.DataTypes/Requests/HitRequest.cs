@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace Api.Battle.DataTypes.Requests
+﻿namespace Api.Battle.DataTypes.Requests
 {
-    public class HitRequest
+    public class HitRequest : PlayerRequest
     {
-        public Guid PlayerId { get; set; }
         public Coordinate Hit { get; set; }
     }
 }

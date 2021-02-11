@@ -24,7 +24,7 @@ namespace Web.Battleship.Controllers
             return Ok(result);
         }
 
-        [HttpPost("addShips")]
+        [HttpPost("deployShips")]
         public async Task<IActionResult> DeployShips([FromBody] DeployShipsRequest request)
         {
             var result = await _gameService.DeployShips(request).ConfigureAwait(false);

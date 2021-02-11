@@ -11,6 +11,6 @@
         public byte HitsTaken { get; set; }
         public bool IsDestroyed { get; set; }
 
-        public Board Board { get; set; }
+        public virtual Board Board { get; set; }
     }
 }

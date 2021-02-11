@@ -11,6 +11,7 @@ namespace Web.Battleship.Extensions
         internal static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<BattleShipContext>(options => options
+                .UseLazyLoadingProxies()
                 .UseSqlServer(configuration.GetConnectionString("BattleshipDb")
                     , b => b.MigrationsAssembly("Web.Battleship")));
 

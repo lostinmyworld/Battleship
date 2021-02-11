@@ -38,7 +38,7 @@ namespace Api.Battle.Services
             };
         }
 
-        public void CannonBallHit(BoardDto enemyBoard, CannonBallDto cannonBall)
+        public bool CannonBallHit(BoardDto enemyBoard, CannonBallDto cannonBall)
         {
             if (enemyBoard == null)
             {
@@ -49,7 +49,9 @@ namespace Api.Battle.Services
                 throw new ArgumentNullException(nameof(cannonBall));
             }
 
+            var hitSuccess = IsHit(enemyBoard, cannonBall);
 
+            return hitSuccess;
         }
 
         private BattleshipDto CreateShip(Ship ship)
@@ -69,8 +71,6 @@ namespace Api.Battle.Services
             {
                 board.CannonBallsShot = new HashSet<CannonBallDto>();
             }
-
-            //board.CannonBallsShot.Add(cannonball); TODO: outside method
 
             foreach (var ship in board.Ships)
             {

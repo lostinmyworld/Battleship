@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Api.Battle.DataTypes.Requests
 {
-    public class DeployShipsRequest
+    public class DeployShipsRequest : PlayerRequest
     {
-        public Guid PlayerId { get; set; }
         public IEnumerable<Ship> Ships { get; set; }
     }
 }

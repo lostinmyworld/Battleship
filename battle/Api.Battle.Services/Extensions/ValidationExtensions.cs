@@ -15,17 +15,25 @@ namespace Api.Battle.Services.Extensions
 
         internal static bool IsValid(this DeployShipsRequest request)
         {
-            return request != null
-                && request.PlayerId != default
+            var parentRequest = (PlayerRequest)request;
+
+            return parentRequest.IsValid()
                 && request.Ships != null && request.Ships.Count() == MAX_SHIPS
                 && request.Ships.All(IsValid);
         }
 
         internal static bool IsValid(this HitRequest request)
         {
-            return request != null
-                && request.PlayerId != default
+            var parentRequest = (PlayerRequest)request;
+
+            return parentRequest.IsValid()
                 && request.Hit != null;
+        }
+
+        internal static bool IsValid(this PlayerRequest request)
+        {
+            return request != null
+                && request.PlayerId != default;
         }
 
         private static bool IsValid(this Ship ship)

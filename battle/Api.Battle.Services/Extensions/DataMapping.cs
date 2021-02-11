@@ -1,4 +1,5 @@
-﻿using Api.Battle.DataTypes.DTOs;
+﻿using Api.Battle.DataTypes;
+using Api.Battle.DataTypes.DTOs;
 using Api.Battle.DataTypes.Responses;
 using AutoMapper;
 using Data.EfCore.Models;
@@ -14,6 +15,7 @@ namespace Api.Battle.Services.Extensions
             CreateMap<CannonBallDto, CannonBall>().ReverseMap();
             CreateMap<BattleshipDto, Battleship>().ReverseMap();
             CreateMap<BoardDto, Board>().ReverseMap();
+            CreateMap<CannonBallDto, Coordinate>().ReverseMap();
         }
     }
 }

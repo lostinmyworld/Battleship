@@ -7,7 +7,7 @@ namespace Data.EfCore.Models
         public string PlayerName { get; set; }
         public Guid PlayerId { get; set; }
 
-        public Board Board { get; set; }
+        public virtual Board Board { get; set; }
 
         public bool IsWinner { get; set; }
     }

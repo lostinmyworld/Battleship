@@ -9,8 +9,16 @@ namespace Data.Repository
     {
         Task<SessionIds> CreateGame(string gameName);
 
-        Task<Player> GetPlayerById(Guid playerId);
-        Task<Player> GetEnemyPlayer(Guid playerId);
+        Task<Player> RetrievePlayerById(Guid playerId);
+        Task<Player> RetrieveEnemyPlayer(Guid playerId);
+
+        bool IsHitRepeated(Player player, byte row, byte column);
+
+        void UpdateShipsHits(Player player, Board board);
+        void UpdateCannonbalsShot(Player player, CannonBall cannonBall);
+
+        Task<bool> IsItFinished(Guid playerId);
+        Task AnnounceWinner(Player player);
 
         Task<bool> SaveAsync();
     }

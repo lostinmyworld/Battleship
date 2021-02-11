@@ -5,6 +5,6 @@
         public byte Row { get; set; }
         public byte Column { get; set; }
         public bool Hit { get; set; }
-        public Board Board { get; set; }
+        public virtual Board Board { get; set; }
     }
 }

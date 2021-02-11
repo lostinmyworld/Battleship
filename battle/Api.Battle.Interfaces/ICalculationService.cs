@@ -6,5 +6,6 @@ namespace Api.Battle.Interfaces
     public interface ICalculationService
     {
         BoardDto CreatePlayerBoard(DeployShipsRequest request);
+        bool CannonBallHit(BoardDto enemyBoard, CannonBallDto cannonBall);
     }
 }

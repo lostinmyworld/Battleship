@@ -8,6 +8,7 @@ namespace Api.Battle.Interfaces
     {
         Task<CreateGameResponse> CreateGameSession(CreateGameRequest request);
         Task<bool> DeployShips(DeployShipsRequest request);
-        Task<bool> CannonBallHit(HitRequest request);
+        Task<HitResponse> CannonBallHit(HitRequest request);
+        Task<GetPlayerShipsResponse> GetAllPlayerShips(PlayerRequest request);
     }
 }
