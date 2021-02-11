@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Data.EfCore.Models
+namespace Api.Battle.DataTypes.DTOs
 {
-    public class Player : BaseEntity
+    public class PlayerDto
     {
         public string PlayerName { get; set; }
         public Guid PlayerId { get; set; }
 
-        public Board Board { get; set; }
+        public BoardDto Board { get; set; }
 
         public bool IsWinner { get; set; }
     }

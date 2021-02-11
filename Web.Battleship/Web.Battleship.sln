@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Battle.Services", "..\b
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Battle.DataTypes", "..\battle\Api.Battle.DataTypes\Api.Battle.DataTypes.csproj", "{456702DF-7783-4ED2-8027-2B48CC71276A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Types", "..\data\Data.Types\Data.Types.csproj", "{1CB454EF-B595-47EE-9F66-BE5347190212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Types", "..\data\Data.Types\Data.Types.csproj", "{1CB454EF-B595-47EE-9F66-BE5347190212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Base.DataTypes", "..\base\Api.Base.DataTypes\Api.Base.DataTypes.csproj", "{C024C127-0372-495A-9957-3D3B299BA93F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{1CB454EF-B595-47EE-9F66-BE5347190212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB454EF-B595-47EE-9F66-BE5347190212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB454EF-B595-47EE-9F66-BE5347190212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C024C127-0372-495A-9957-3D3B299BA93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C024C127-0372-495A-9957-3D3B299BA93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C024C127-0372-495A-9957-3D3B299BA93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C024C127-0372-495A-9957-3D3B299BA93F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{8F1C0118-5365-4DC7-9F9B-8B8F5EDAF34D} = {A3C19DE5-7380-47D1-81FF-14F776FBB969}
 		{456702DF-7783-4ED2-8027-2B48CC71276A} = {A3C19DE5-7380-47D1-81FF-14F776FBB969}
 		{1CB454EF-B595-47EE-9F66-BE5347190212} = {E4A8B389-29AF-44FA-9806-241F56048279}
+		{C024C127-0372-495A-9957-3D3B299BA93F} = {8E5AA61C-E907-4BA4-A997-E9CABCACDC6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {889B6BAF-E77D-452C-A057-2F29310F9FBA}

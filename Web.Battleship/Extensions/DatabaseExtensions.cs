@@ -8,13 +8,15 @@ namespace Web.Battleship.Extensions
 {
     internal static class DatabaseExtensions
     {
-        internal static void AddDatabase(this IServiceCollection services, IConfiguration configuration)
+        internal static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<BattleShipContext>(options => options
                 .UseSqlServer(configuration.GetConnectionString("BattleshipDb")
                     , b => b.MigrationsAssembly("Web.Battleship")));
 
             services.AddScoped<IBattleshipRepository, BattleshipRepository>();
+
+            return services;
         }
     }
 }

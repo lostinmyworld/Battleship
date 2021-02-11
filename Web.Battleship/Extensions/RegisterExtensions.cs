@@ -1,18 +1,33 @@
 ﻿using Api.Battle.Interfaces;
 using Api.Battle.Services;
+using Api.Battle.Services.Extensions;
+using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Web.Battleship.Extensions
 {
     internal static class RegisterExtensions
     {
-        internal static void AddServices(this IServiceCollection services)
+        internal static IServiceCollection AddServices(this IServiceCollection services)
         {
+            services.AddScoped<ICalculationService, CalculationService>();
             services.AddScoped<IGameService, GameService>();
+
+            return services;
+        }
+
+        internal static IServiceCollection AddMappings(this IServiceCollection services)
+        {
+            var mapperConfig = new MapperConfiguration(m =>
+            {
+                m.AddProfile<DataMapping>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            services.AddSingleton(mapper);
+
+            return services;
         }
     }
 }

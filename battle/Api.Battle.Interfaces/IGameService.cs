@@ -7,5 +7,7 @@ namespace Api.Battle.Interfaces
     public interface IGameService
     {
         Task<CreateGameResponse> CreateGameSession(CreateGameRequest request);
+        Task<bool> DeployShips(DeployShipsRequest request);
+        Task<bool> CannonBallHit(HitRequest request);
     }
 }

@@ -9,22 +9,21 @@ namespace Web.Battleship
 {
     public class Startup
     {
-        public IConfiguration _configuration { get; }
+        public IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
         {
-            _configuration = configuration;
+            Configuration = configuration;
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
 
-            services.AddDatabase(_configuration);
-
-            services.AddServices();
-
-            services.AddSomeSwag();
+            services.AddDatabase(Configuration)
+                .AddMappings()
+                .AddServices()
+                .AddSomeSwag();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
