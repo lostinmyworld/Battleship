@@ -1,7 +1,7 @@
-﻿using Api.Battle.Interfaces;
-using Api.Battle.Services;
-using Api.Battle.Services.Extensions;
+﻿using Application;
 using AutoMapper;
+using Infrastructure;
+using Infrastructure.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Web.Battleship.Extensions

@@ -1,5 +1,5 @@
-﻿using Api.Battle.DataTypes.Requests;
-using Api.Battle.Interfaces;
+﻿using Application;
+using Contracts.Requests;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
